@@ -29,7 +29,7 @@ $patterns["gray"] = array(
     array(0x11, 0x11, 0x11),
     array(0xaa, 0xaa, 0xaa),
     array(0xdd, 0xdd, 0xdd));
-
+if(isset($_GET['which'])){
 switch ($_GET['which']) {
     case "image-head":
         $r = new aichingm\drunkenTribbles\Randerer(300, 1500);
@@ -74,4 +74,5 @@ switch ($_GET['which']) {
         $r->draw($r->randerGrid(), true, true, 4);
         break;
     
+}
 }
