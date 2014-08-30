@@ -69,8 +69,9 @@ class Randerer {
 
         header("Content-Type: image/png");
         $im = imagecreatetruecolor($this->width * $multiplier, $this->hight * $multiplier);
-        if ($antialias) {
-            imageantialias($im, true);
+
+        if ($antialias && function_exists("imageantialias")) {
+            \imageantialias($im, true);
         }
 
         for ($y = 0; $y < count($grid); $y++) {
