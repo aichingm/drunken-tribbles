@@ -2,7 +2,6 @@
 
 require_once './src/Randerer.php';
 
-
 $patterns = array();
 $patterns["blue"] = array(
     array(0x00, 0x1f, 0x3f),
