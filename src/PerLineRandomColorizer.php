@@ -2,7 +2,7 @@
 namespace aichingm\drunkenTribbles;
 class PerLineRandomColorizer implements Colorizer {
 
-    private $colors;
+    private $color;
 
     public function __construct() {
         $this->color = array(rand(0, 255), rand(0, 255), rand(0, 255));
