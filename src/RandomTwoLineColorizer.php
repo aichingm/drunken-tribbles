@@ -2,7 +2,7 @@
 
 namespace aichingm\drunkenTribbles;
 
-class RandomArrayColorizer implements Colorizer {
+class RandomTwoLineColorizer implements Colorizer {
 
     private $colors1;
     private $colors2;
