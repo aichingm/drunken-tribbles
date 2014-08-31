@@ -11,6 +11,8 @@ require_once __DIR__ . '/RoundArrayLineColorizer.php';
 require_once __DIR__ . '/RoundArrayLineColorizerBuggy.php';
 require_once __DIR__ . '/RoundArrayLineExtremeWonkyColorizer.php';
 require_once __DIR__ . '/RoundArrayLineWonkyColorizer.php';
+require_once __DIR__ . '/RandomTwoLineColorizer.php';
+
 
 class Randerer {
 
