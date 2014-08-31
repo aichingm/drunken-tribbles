@@ -71,6 +71,9 @@ function getColorizer() {
         case "RandomColorizer":
             return new aichingm\drunkenTribbles\RandomColorizer();
             break;
+        case "RoundArrayColorizer":
+            return new aichingm\drunkenTribbles\RoundArrayColorizer(getColors());
+            break;
         case "RoundArrayLineColorizer":
             return new aichingm\drunkenTribbles\RoundArrayLineColorizer(getColors());
             break;
