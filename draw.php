@@ -83,6 +83,9 @@ function getColorizer() {
         case "RoundArrayLineWonkyColorizer":
             return new aichingm\drunkenTribbles\RoundArrayLineWonkyColorizer(getColors());
             break;
+        case "RandomTwoLineColoizer":
+             return new aichingm\drunkenTribbles\RandomTwoLineColorizer(getColors());
+            break;
         default :
             return new aichingm\drunkenTribbles\RandomColorizer();
             break;
