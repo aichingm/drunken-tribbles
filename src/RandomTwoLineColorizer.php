@@ -15,9 +15,9 @@ class RandomTwoLineColorizer implements Colorizer {
 
     public function getColor() {
         if ($this->line % 2 == 0) {
-            return $this->colors[array_rand($this->colors1)];
+            return $this->colors1[array_rand($this->colors1)];
         } else {
-            return $this->colors[array_rand($this->colors2)];
+            return $this->colors2[array_rand($this->colors2)];
         }
     }
 
