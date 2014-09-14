@@ -28,6 +28,22 @@ $patterns["gray"] = array(
     array(0x11, 0x11, 0x11),
     array(0xaa, 0xaa, 0xaa),
     array(0xdd, 0xdd, 0xdd));
+$patterns["colorful"] = parseColorsArray(array("#001F3F",
+"#0074D9",
+"#7FDBFF",
+"#39CCCC",
+"#3D9970",
+"#2ECC40",
+"#01FF70",
+"#FFDC00",
+"#FF851B",
+"#FF4136",
+"#85144B",
+"#F012BE",
+"#B10DC9",
+"#111111",
+"#AAAAAA",
+"#DDDDDD"));
 
 
 
@@ -144,4 +160,15 @@ function parseColors($str) {
     //var_dump($colors);
     //exit;
     return $colors;
+}
+function parseColorsArray(array $colors) {
+    $colorsReturn = array();
+    foreach ($colors as $color) {
+        if (preg_match("~^#[0-9abcdefABCDEF]{6}$~", $color)) {
+            $colorsReturn[] = array(hexdec($color[1] . $color[2]), hexdec($color[3] . $color[4]), hexdec($color[5] . $color[6]));
+        } elseif (preg_match("~^#[0-9abcdefABCDEF]{3}$~", $color)) {
+            $colorsReturn[] = array(hexdec($color[1].$color[1]), hexdec($color[2].$color[2]), hexdec($color[3].$color[3]));
+        }
+    }
+    return $colorsReturn;
 }
